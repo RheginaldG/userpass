@@ -79,7 +79,7 @@ namespace userpass
             //string periodcheck = ".";
             string correctformat = "Correct Format";
             string incorrectformat = "Wrong Format";
-            var regexItem = new Regex("^[a-z0-9.]{3,}@[a-z0-9]");
+            var regexItem = new Regex("^[a-z0-9._]{3,}@[a-z0-9]");
             
 
 
