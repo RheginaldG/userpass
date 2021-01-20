@@ -75,14 +75,15 @@ namespace userpass
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string atcheck = "@";
+            //string atcheck = "@";
             //string periodcheck = ".";
             string correctformat = "Correct Format";
             string incorrectformat = "Wrong Format";
-           
+            var regexItem = new Regex("^[a-z0-9]{3,}@[a-z0-9]");
+            
 
 
-           if (Convert.ToString(textBox1.Text).Contains(atcheck))
+            if (regexItem.IsMatch(Convert.ToString(textBox1.Text)))
             {
                 label1.Text = correctformat;
             }
